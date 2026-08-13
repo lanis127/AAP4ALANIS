@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CADASTRO DE VOLUNTÁRIOS</title>
+
+    <style>
+        body {
+            background-color: #f5f376;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        h1 {
+            color: #ff5adb;
+            font-size: 48px;
+        }
+
+        h3 {
+            color: #ff5adb;
+        }
+
+        p {
+            color: #ffffff;
+            font-size: 20px;
+        }
+
+        .container-flex {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+        }
+
+        .coluna {
+            flex: 1;
+        }
+
+        a {
+            color: rgb(255, 73, 225);
+        }
+
+        form {
+            margin: 0 auto;
+            width: 400px;
+            text-align: left;
+        }
+
+        form div {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: inline-block;
+            width: 100px;
+            color: #333333;
+        }
+
+        input {
+            padding: 8px;
+            width: 250px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 25px;
+            background-color: #ff5adb;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #e34bc7;
+        }
+
+        .mensagem {
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .erro {
+            color: red;
+            font-size: 14px;
+            margin-left: 105px;
+        }
+
+        .sucesso {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CADASTRO DE VOLUNTÁRIOS</h1>
+
+    <div class="container-flex">
+
+        <div class="coluna">
+            <h3>INICIO</h3>
+        </div>
+
+        <div class="coluna">
+            <h3>MENU</h3>
+        </div>
+
+    </div>
+
+    <a href="">CADASTRO</a>
+
+    <br>
+    <br>
+    <br>
+
+    <form id="formulario">
+
+        <div>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome">
+            <div id="erroNome" class="erro"></div>
+        </div>
+
+        <div>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email">
+            <div id="erroEmail" class="erro"></div>
+        </div>
+
+        <div>
+            <label for="numero">Telefone:</label>
+            <input type="tel" id="numero" name="numero">
+            <div id="erroNumero" class="erro"></div>
+        </div>
+
+        <div>
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha">
+            <div id="erroSenha" class="erro"></div>
+        </div>
+
+        <br>
+
+        <h3>ENDEREÇO</h3>
+
+        <div>
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep" name="cep" maxlength="9"
+                placeholder="00000-000">
+            <div id="erroCep" class="erro"></div>
+        </div>
+
+        <div>
+            <label for="rua">Rua:</label>
+            <input type="text" id="rua" name="rua" readonly>
+        </div>
+
+        <div>
+            <label for="bairro">Bairro:</label>
+            <input type="text" id="bairro" name="bairro" readonly>
+        </div>
+
+        <div>
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" name="cidade" readonly>
+        </div>
+
+        <div>
+            <label for="estado">Estado:</label>
+            <input type="text" id="estado" name="estado" readonly>
+        </div>
+
+        <br>
+
+        <button type="submit">Cadastrar</button>
+
+        <div id="mensagem" class="mensagem"></div>
+
+    </form>
+
+    <script src="atv2.js"></script>
+
+</body>
+
+</html>
